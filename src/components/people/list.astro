@@ -1,17 +1,23 @@
 ---
-import List from "./load_data.vue";
+import List from "./list_data.vue";
 
   
 ---
 
-<div class="flex w-full h-full justify-center">
-  <div class="flex w-[96%] h-full border-2 border-blue-400 mt-4 rounded-xl justify-center items-center">
-    <div class="data-box-frame h-[96%] w-[97%] flex gap-5">
+
+<div class="page flex flex-wrap w-full h-full justify-center">
+  <form class="flex w-[96%] h-10 border-2 text-amber-50 border-blue-400 rounded-xl justify-center items-center">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+  <div class="main-data flex w-[96%] h-full flex-wrap overflow-auto contain-content border-2 border-blue-400 mt-4 rounded-xl justify-center items-center">
+    <div class="search-filter w-full h-15 border-b-2 border-blue-400">
+
+    </div>
+    <div class="data-box-frame pt-2 flex-wrap h-full w-full flex gap-5 justify-center">
       <List client:load class="h-full w-full"/>
     </div>
   </div>
 </div>
-
-<style>
-
-</style>

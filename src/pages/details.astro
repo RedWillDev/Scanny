@@ -1,0 +1,20 @@
+---
+import Details_vue from "/home/red/Scanny/src/components/people/details_data.vue"
+import Layout from '../layouts/Layout.astro';
+---
+
+<script>
+	const params = new URLSearchParams(window.location.search);
+  const search = params.get('uuid');
+
+  if (search) {
+    document.getElementById('result').textContent =
+      `You searched for: ${search}`;
+  }
+</script>
+
+s
+<Layout>
+	<Details_vue client:load/>
+</Layout>
+
